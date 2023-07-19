@@ -42,7 +42,7 @@ nav ul {
 }
 nav ul li{
     list-style: none;
-    padding: 32px;
+    padding: 10px 32px;
 }
 nav ul li a{
     text-decoration: none;
@@ -52,6 +52,11 @@ nav ul li a{
     font-size: 18px;
     font-weight: 500;
 }
+.design{
+    background: #e6c6c6;
+    border-radius: 10px;
+    gap: 5px;
+} 
 /* This is banner */
 .banner{
 background-image: url(images/Group\ 14.png);
@@ -193,6 +198,7 @@ margin-right: 120px;
 }
 .playing-info-2{
     text-align: left;
+    margin-left: 90px;
 }
 .playing-img{
 width: auto;
@@ -207,10 +213,6 @@ position: relative;
 .img-1{
     position: relative;
 }
-.playing-img-1{
-    width: auto;
-    position: relative;
-    }
 .img-11{
     position: relative;
 }
@@ -220,37 +222,133 @@ position: relative;
     bottom: -50px;
     right:-100px;
 }
-
-
-
-
-
-
-
-
-
-
-
+/* This section is for Sponsors */
+.sponsors-container{
+    /* display: flex;
+    flex-grow: 5;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 1fr); */
+    /* justify-content: center;
+    align-items: center;
+    place-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr repeat(3, 170px) 1fr;
+    grid-template-areas: ". item1 item2 item3 item4 item5."
+                            "item6 item7 item8 item9";
+    grid-template-rows: 1fr 1fr; */
+    display: grid;
+    grid-template-columns:  20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+    padding: 10px;
+    margin: 0px 240px;
+    place-items: center;
+}
+.contain{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 20%;
+}
+.contain:hover{
+    border: 2px solid #F948B2;
+    padding: 30px 20px;
+    border-radius: 40px;
+}
+/* This is Footer */
+.footer{
+    background: #0B0223; 
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 240px;
+}
+.logo-1 h3{
+    color: #FFF;
+}
+.logo-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-info ul{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+.about-info ul li{
+    list-style: none;
+}
+.about-info ul li a {
+text-decoration: none;
+color: #fff;
+}
+.button-1 button{
+    margin:35px 30px;
+    font-size: 30px;
+}
+.desc{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
 
 @media only screen and (max-width: 576px){
     nav{
        flex-direction: column;
-       margin: 30px auto;
-       /* flex-wrap: nowrap; */
+       margin: 0 ;
     }
     nav ul{
         flex-direction: column;
         align-items: center;
-        margin: 10px auto;
-        padding: 5px;
+        margin: 10px 0 ;
+        
     }
     .banner-content{
         flex-direction: column-reverse;
     }
     .banner-info{
-        width: 90%;
+        width: 400px;
+        margin: auto 0;
+        text-align: center;
     }
-    .banner-img {
-        width: 90%;
+    .banner-img{
+        width: 400px;
+    }
+    .banner-img img{
+        width: 400px;
+        margin: auto 0;
+    }
+    .gammer-container{
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .gammer-img img{
+        width: 400px;
+    }
+    .gammer-info{
+        width: 400px;
+        text-align: center;
+    }
+    .game-image-container{
+        flex-direction: column;
+        margin: auto 0;
+        text-align: center;
+    }
+    .game-image-container img{
+        width: 300px;
+        justify-content: center;
+    }
+    .online-game-info{
+        width: 300px;
+        text-align: center;
+        margin: 0;
     }
 }
+
