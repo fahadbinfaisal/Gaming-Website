@@ -175,7 +175,7 @@ font-weight: 700;
     gap: 10px;
     text-align: left;
 }
-.game-image-container div img{
+/* .game-image-container div img{
     margin-bottom: 20px;
     width: 100%;
 }
@@ -183,8 +183,66 @@ font-weight: 700;
     opacity: 0.4;
     border: 3px solid #F948B2;
     border-radius: 16px;
-}
+} */
 /* Playing Section */
+
+
+
+
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.6;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.play {
+  font-size: 36px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .playing-container{
     display: flex;
     align-items: center;
@@ -206,54 +264,49 @@ position: relative;
 }
 .img-2{
     position: absolute;
-    width: auto;
+    width: 50%;
     bottom: -50px;
     left:-100px;
 }
 .img-1{
+    width: 100%;
     position: relative;
 }
 .img-11{
+    width: 100%;
     position: relative;
 }
 .img-22{
     position: absolute;
-    width: auto;
+    width: 50%;
     bottom: -50px;
     right:-100px;
 }
 /* This section is for Sponsors */
 .sponsors-container{
-    /* display: flex;
-    flex-grow: 5;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(5, 1fr); */
-    /* justify-content: center;
-    align-items: center;
-    place-items: center;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr repeat(3, 170px) 1fr;
-    grid-template-areas: ". item1 item2 item3 item4 item5."
-                            "item6 item7 item8 item9";
-    grid-template-rows: 1fr 1fr; */
     display: grid;
     grid-template-columns:  20% 20% 20% 20% 20%;
     grid-template-rows: 25% 25% 25% 25%;
     padding: 10px;
-    margin: 0px 240px;
-    place-items: center;
+    margin: 0px 240px 0 240px;
+    justify-content: center;
+    align-items: center;
 }
 .contain{
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 20%;
+    /* margin: 20% 30%; */
+    margin-bottom: 100px;
+    position: relative;
+}
+.contain img{
 }
 .contain:hover{
     border: 2px solid #F948B2;
-    padding: 30px 20px;
+    padding: 8px 40px;
     border-radius: 40px;
+    color: #F948B2;
 }
 /* This is Footer */
 .footer{
@@ -262,7 +315,8 @@ position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 240px;
+    padding: 100px 0;
+    margin-top: -150px;
 }
 .logo-1 h3{
     color: #FFF;
@@ -275,7 +329,6 @@ position: relative;
 .about-info ul{
     text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 60px;
     margin-top: 40px;
@@ -286,6 +339,10 @@ position: relative;
 .about-info ul li a {
 text-decoration: none;
 color: #fff;
+}
+.button-1{
+    justify-content: center;
+    align-items: center;
 }
 .button-1 button{
     margin:35px 30px;
@@ -299,10 +356,28 @@ color: #fff;
     margin-bottom: 45px;
 }
 
+
+.button-1 button a i{
+    background: none;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 576px){
+    body{
+      position: relative;
+      overflow-x: hidden;
+    }
     nav{
        flex-direction: column;
-       margin: 0 ;
+       margin: 10px 0 ;
     }
     nav ul{
         flex-direction: column;
@@ -331,6 +406,7 @@ color: #fff;
     }
     .gammer-img img{
         width: 400px;
+        justify-content: center;
     }
     .gammer-info{
         width: 400px;
@@ -341,14 +417,85 @@ color: #fff;
         margin: auto 0;
         text-align: center;
     }
-    .game-image-container img{
-        width: 300px;
+
+    /* .play{
+        transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+    } */
+    /* .online-game-container .game-image-container img{
+        width: auto;
         justify-content: center;
-    }
+    } */
     .online-game-info{
-        width: 300px;
+        width: auto;
         text-align: center;
         margin: 0;
     }
+    .online-game-info h2{
+        font-size: 32px;
+    }
+.playing-container{
+    flex-direction: column;
+    margin:40px 0;
+    padding: 0;
+}
+.playing-info{
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+.playing-info .text-primary{
+    font-size: 30px;
+}
+.playing-img{
+    width: 300px;
+    margin: 0px;
+}
+.playing-img img{
+    max-width: 300px;
+}
+.playing-img .img-22{
+    width: 200px;
+}
+.playing-img .img-2{
+    width: 200px;
+}
+.sponsors-container{
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+}
+.sponsors-container .contain img{
+    width: 50%;
+}
+.contain h6{
+font-size: 0.6em;
+}
+.about-info ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px 20px;
+    row-gap: 10px;
+    column-gap: 40px;
+}
+.button-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: centers;
+    row-gap: 10px;
+    column-gap: 40px;
+}
+.desc{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer-container p{
+    display: block;
+}
 }
 
